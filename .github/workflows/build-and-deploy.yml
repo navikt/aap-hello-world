@@ -58,7 +58,7 @@ jobs:
                     ./mvnw  --settings .github/.m2/settings.xml  -DGAR_TOKEN=${{ secrets.NAIS_WORKLOAD_IDENTITY_PROVIDER }} -Djib.to.tags=latest,${TAG} -Drevision=${TAG}  package jib:build
 
             -   name: Submit Dependency Snapshot
-                uses: advanced-security/maven-dependency-submission-action@v3
+                uses: advanced-security/maven-dependency-submission-action@v4
                 with:
                     settings-file: .github/.m2/settings.xml
 
